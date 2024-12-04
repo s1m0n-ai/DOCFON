@@ -1,0 +1,624 @@
+/* Com styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Slamming';
+    src: url('../fonts/Slamming.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --green: #17704A;
+    --orange: #FFA803;
+    --red: #F71D01;
+    --white: #ffffff;
+    --gossip: #DFF5AB;
+    --shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+    --shadow-reg: 1px 3px 0px #092C1D;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    background-color: var(--green);
+    /* background-image: url(images/bg-green.gif); */
+    /* background-size: 100% 100%; */
+    /* background-size: 100% auto; */
+    /* background-size: cover; */
+    /* background-position: 50% 50%; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    font-family: "Archivo", sans-serif;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bg-phonk {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+}
+
+.bg-phonk img {
+    width: 100%;
+    height: 100%;
+}
+
+.t-sh {
+    text-shadow: var(--shadow-reg);
+}
+
+h1, h2 {
+    font-family: 'Slamming', sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+.t-sign {
+    position: relative;
+    display: inline-block;
+    font-size: 92px;
+    line-height: 100px;
+    font-weight: bold;
+    color: var(--orange);
+    text-shadow: var(--shadow);
+    text-transform: uppercase;
+}
+
+.t-sign::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--red);
+    z-index: -1;
+    transform: translate(4px, 7px); /* Смещение подложки */
+    text-shadow: var(--shadow);
+}
+
+.decor-left::before {
+    content: "";
+    width: 590px;
+    height: 52px;
+    background-image: url(../images/decor-left.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: calc(100% + 40px);
+    top: 20px;
+}
+
+.decor-right::before {
+    content: "";
+    width: 550px;
+    height: 52px;
+    background-image: url(../images/decor-right.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    margin-left: 40px;
+}
+
+.decor-meme-left::before {
+    content: "";
+    width: 600px;
+    height: 50px;
+    background-image: url(../images/decor-meme.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: calc(100% + 40px);
+    top: 20px;
+}
+
+.decor-meme-right::before {
+    content: "";
+    width: 600px;
+    height: 50px;
+    background-image: url(../images/decor-meme.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    margin-left: 40px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 40px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-des {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main .container {
+    padding-top: 360px;
+}
+
+.buts {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.buts-cta {
+    border: 1px solid var(--gossip);
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.16);
+}
+
+.buts-cta:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.socials {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin: 40px 0px;
+    flex-wrap: wrap;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.socials a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.socials-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buts-buy-inner {
+    display: flex;
+    height: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    background: linear-gradient(180deg, #EBD9A7 0%, #C9A867 100%);
+    box-shadow: 0px 1px 3px 0px rgba(255, 255, 255, 0.25) inset;
+    text-shadow: 0px 0.817px 0px #3C5511;
+    /* -webkit-text-stroke-width: 1.2247705459594727; */
+    /* -webkit-text-stroke-color: #3C5511; */
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.6px;
+}
+
+.buts-buy-inner:hover {
+    background: var(--green);
+}
+
+.buts-buy {
+    display: inline-flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 41px;
+    border: 5px solid #0C0B0D;
+    background: linear-gradient(180deg, #E1A86C 0%, #A94D1C 94.27%);
+    box-shadow: 0px 0px 0px 2px #DFF5AB, 0px 2px 1px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.main-drlivesey-img {
+    max-width: 400px;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+}
+
+.main .ca {
+    color: var(--orange);
+    text-shadow: var(--shadow-reg);
+    text-align: center;
+    word-break: break-all;
+}
+
+.main .lock {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.main .lock:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.frame-buy {
+    width: 710px;
+    position: absolute;
+    top: 0px;
+}
+
+.drlivesey-rom {
+    width: 380px;
+    z-index: 3;
+    position: absolute;
+    top: 16px;
+}
+
+.howtobuy-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 5;
+    max-width: 350px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.howtobuy {
+    margin-bottom: 280px;
+}
+
+.howtobuy h2 {
+    z-index: 4;
+    margin-top: 307px;
+}
+
+.howtobuy-item {
+     display: flex;
+     gap: 10px;
+     z-index: 6;
+}
+
+.howtobuy-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.howtobuy-item-wrap {
+    padding-top: 20px;
+    
+}
+
+.howtobuy-item h3 {
+    text-shadow: var(--shadow-reg);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.howtobuy-item p {
+    color: var(--gossip);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 19.5px */
+    margin-top: 0px;
+}
+
+.howtobuy-dashline {
+    position: absolute;
+    width: 0; /* Ширина элемента */
+    height: 80%; /* Высота элемента */
+    border-left: 2px dashed var(--orange); /* Создание пунктирной линии */
+    margin: 29px; /* Поля для наглядности */
+    z-index: 4;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    margin-bottom: 50px;
+}
+
+.about-item {
+    position: relative;
+    width: 660px;
+    height: 370px;
+    padding: 70px 100px;
+    box-sizing: border-box;
+}
+
+.about-item:first-of-type {
+    margin-bottom: 30px;
+}
+
+.about-item-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    box-sizing: border-box;
+    background: #1F8E5F;
+    height: 100%;
+}
+
+.about-item p {
+    text-shadow: var(--shadow-reg);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.about-frame {
+    width: 660px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.drlivesey-ava {
+    width: 100px;
+}
+
+.about-tokenomics {
+    flex-direction: column;
+}
+
+.about-tokenomics p {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.about-tokenomics ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70%;
+    margin: 0;
+}
+
+.about-tokenomics li {
+    color: var(--gossip);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.memes-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 50px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.memes {
+    margin-bottom: 40px;
+}
+
+.memes-wrap img {
+    max-width: 100%;
+}
+
+.meme-01 {
+    width: 520px;
+}
+
+.meme-02 {
+    width: 370px;
+}
+
+.meme-03 {
+    width: 440px;
+}
+
+.meme-04 {
+    width: 200px;
+    height: auto;
+}
+
+.meme-05 {
+    width: 290px;
+}
+
+.meme-06 {
+    width: 330px;
+}
+
+.meme-07 {
+    width: 400px;
+}
+
+.meme-08 {
+    width: 340px;
+}
+
+.meme-09 {
+    width: 340px;
+}
+
+.phonk {
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.phonk iframe {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.phonk-yt {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-width: 850px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.footer-title-wrap {
+    position: relative;
+}
+
+.footer-title {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-title img {
+    width: 80px;
+    height: 80px;
+}
+
+.footer-title h3 {
+    font-size: 26px;
+    font-family: 'Slamming', sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    opacity: 0.5;
+    padding-bottom: 40px;
+}
+
+@media(max-width: 900px) {
+    .wrap {
+        padding: 0px 20px;
+    }
+    .buts {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .buts-buy {
+        flex-basis: 100%;
+        order: -1;
+    }
+
+    .buts-buy-inner {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .socials {
+        gap: 40px;
+        row-gap: 20px;
+    }
+
+    .socials a {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 800px) {
+    .t-sign {
+        font-size: 80px;
+    }
+
+    .phonk .t-sign {
+        width: 240px;
+    }
+
+    .decor-left::before {
+        right: calc(100% + 20px);
+    }
+
+    .phonk-yt {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media(max-width: 550px) {
+    .main .container {
+        padding-top: 200px;
+    }
+
+    .main-drlivesey-img {
+        max-height: 440px;
+    }
+}
+
+@media(max-width: 430px) {
+    .howtobuy h2 {
+        width: 280px;
+        margin-top: 205px;
+    }
+
+    .howtobuy-item p {
+        font-size: 14px;
+    }
+}
